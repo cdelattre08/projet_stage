@@ -25,7 +25,7 @@
     <div class="sucess">
     <h1>Bienvenue <?php echo "".strip_tags($_SESSION['username']); ?> !</h1>
     <p>C'est votre espace administrateur.</p>
-    <a href="add_user.php">Ajouter un utilisateur</a> |  
+    <a href="add_user.php">Ajouter un utilisateur</a> | 
     <a href="delete_user.php">Supprimer un utilisateur</a> |
     <a href="list_user.php">Liste complète d'utilisateur</a> |
     <a href="../logout.php">Déconnexion</a>
