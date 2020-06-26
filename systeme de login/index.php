@@ -22,9 +22,20 @@
     <p>C'est votre espace utilisateur.</p>
     <a href="logout.php">Déconnexion</a>
     </div>
-    
+	
+	<p>
+    <h1>Inscription</h1>
+        <form action="" method="post">
+            Entre ton mdp : <div><input type="password" name="mdp" value="" placeholder="mdp"></div>
+            Entre ton login : <div><input type="text" name="login" value="" placeholder="login"></div>
+            <div><input type = "submit" name = "Valider" value = "Valider"></div>
+
+        </form>
+    </p>
+
 
 </body>
 </html>
 <link rel="stylesheet" href="text.css">
-    <meta charset='utf-8'/>     
+	<meta charset='utf-8'/>   
+	
