@@ -69,8 +69,8 @@ if(mysqli_num_rows($select2)) {
     if($res){
        echo "<div class='sucess'>
              <h3>L'utilisateur a été créée avec succés.</h3>
-             <p>Cliquez <a href='home.php'>ici</a> pour retourner à la page d'accueil</p>
        </div>";
+       header("refresh:5;url=home.php");
     }
     
       

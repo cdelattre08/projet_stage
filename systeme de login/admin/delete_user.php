@@ -1,4 +1,5 @@
 <?php require('../config.php'); ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,6 +30,36 @@ if (isset($_REQUEST['username'], $_REQUEST['name'])){
     exit('');
   }
 
+  $select3 = mysqli_query($conn, "SELECT * FROM users WHERE username = '".$_POST['username']."'");
+  if(mysqli_num_rows($select3)) {
+    echo "<div class='sucess'>
+    <h3></h3>
+    </div>";
+    header("refresh:5;url=delete_user.php");
+    
+}else{
+  echo "<div class='sucess'>
+    <h3>Le Prénom de cette utilisateur n'existe pas.</h3>
+    </div>";
+    header("refresh:5;url=delete_user.php");
+  exit('');
+}
+
+  $select4 = mysqli_query($conn, "SELECT * FROM users WHERE name = '".$_POST['name']."'");
+  if(mysqli_num_rows($select4)) {
+    echo "<div class='sucess'>
+    <h3>L'utilisateur à bien été supprimer</h3>
+    </div>";
+    
+    
+}else{
+  echo "<div class='sucess'>
+    <h3>Le nom de cette utilisateur n'existe pas.</h3>
+    </div>";
+    header("refresh:5;url=delete_user.php");
+  exit('');
+}
+
   
     
 
@@ -38,16 +69,14 @@ if (isset($_REQUEST['username'], $_REQUEST['name'])){
           WHERE username='$username' AND name='$name'";
     $res = mysqli_query($conn, $query); 
 
-    if($query == 1){
-      
-    }
+    
 
     if($res){
       
        echo "<div class='sucess'>
-             <h3>L'utilisateur a été supprimé avec succés.</h3>
+             
              </div>";
-             header("refresh:2;url=home.php");
+             header("refresh:5;url=home.php");
     }
     
 }else{
