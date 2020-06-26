@@ -38,7 +38,9 @@ if (isset($_REQUEST['username'], $_REQUEST['name'])){
           WHERE username='$username' AND name='$name'";
     $res = mysqli_query($conn, $query); 
 
-    
+    if($query == 1){
+      
+    }
 
     if($res){
       
