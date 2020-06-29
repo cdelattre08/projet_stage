@@ -60,16 +60,14 @@ if (isset($_REQUEST['username'], $_REQUEST['name'])){
   exit('');
 }
 
-  
-    
-
-
     // suppression d'un utilisateur en base de donnée
     $query = "DELETE FROM `users` 
           WHERE username='$username' AND name='$name'";
     $res = mysqli_query($conn, $query); 
-
     
+    //SET @autoid :=0;
+    //UPDATE users SET id = @autoid := (@autoid+1);
+    //ALTER TABLE users Auto_increment = 1;
 
     if($res){
       

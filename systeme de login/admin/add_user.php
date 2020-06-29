@@ -29,8 +29,10 @@ if (isset($_REQUEST['username'], $_REQUEST['name'], $_REQUEST['email'], $_REQUES
 
   $type = stripslashes($_REQUEST['type']);
   $type = mysqli_real_escape_string($conn, $type);
-  
-  
+
+  $mail = $_POST['email']."@la-providence.net";
+
+
   if (empty($username)  || empty($name) || empty($email) || empty($type) || empty($password))
   {
     echo "<div class='sucess'>
@@ -41,24 +43,40 @@ if (isset($_REQUEST['username'], $_REQUEST['name'], $_REQUEST['email'], $_REQUES
     exit('');
   }
   $select = mysqli_query($conn, "SELECT * FROM users WHERE username = '".$_POST['username']."'");
-if(mysqli_num_rows($select)) {
+  if(mysqli_num_rows($select))
+  {
     echo "<div class='sucess'>
     <h3>Cet utilisateur existe déja.</h3>
    
     </div>";
     header("refresh:5;url=add_user.php");
     exit('');
-}
+  }
 
   $select2 = mysqli_query($conn, "SELECT * FROM users WHERE email = '".$_POST['email']."'");
-if(mysqli_num_rows($select2)) {
+  if(mysqli_num_rows($select2)) 
+  {
     echo "<div class='sucess'>
     <h3>Cette adresse mail existe déja.</h3>
-    
     </div>";
     header("refresh:5;url=add_user.php");
     exit('');
-} 
+  } 
+
+  if($mail)
+  {
+    echo "<div class='sucess'>
+    <h3>Le format de l'adresse mail est valide.</h3>
+    </div>"; 
+  }
+  else
+  {
+    echo "<div class='sucess'>
+    <h3>Le format de l'adresse mail n'est pas valide.</h3>
+    </div>";
+    header("refresh:5;url=add_user.php");
+    exit('');
+  }
 
     $query = "INSERT into `users` (username, name, email, type, password)
           VALUES ('$username', '$name', '$email', '$type', '".hash('sha256', $password)."')";
