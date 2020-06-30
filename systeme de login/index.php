@@ -23,15 +23,69 @@
     <a href="logout.php">Déconnexion</a>
     </div>
 	
-	<p>
-    <h1>Inscription</h1>
-        <form action="" method="post">
-            Entre ton mdp : <div><input type="password" name="mdp" value="" placeholder="mdp"></div>
-            Entre ton login : <div><input type="text" name="login" value="" placeholder="login"></div>
-            <div><input type = "submit" name = "Valider" value = "Valider"></div>
+<?php
 
-        </form>
+    if(!empty($_POST))
+    {
+        $u = new user();
+        $valid = true;
+        if(isset($_POST[("Valider")]))
+        {
+            $ecole = $_POST['Ecole'];
+            $college = $_POST['College'];
+            $lp = $_POST['LP'];
+            $legt = $_POST['LEGT'];
+            $bts = $_POST['BTS'];
+            $ufa = $_POST['UFA'];
+            $cfc = $_POST['CFC'];
+            $personnel = $_POST['Personnel'];
+
+            if(!empty($ecole))
+            {
+                $valid = false;
+                echo "Ce champ ne peut pas être vide";
+            }
+
+        }
+    }
+  
+    
+?>
+    <p>
+    <div>
+      <select class="box-input" name="Cycle" id="Cycle" >
+        <option value="" disabled selected>Cycle</option>
+        <option value="Ecole">Ecole</option>
+        <option value="College">College</option>
+        <option value="LEGT">LEGT</option>
+        <option value="LP">LP</option>
+        <option value="BTS">BTS</option>
+        <option value="UFA">UFA</option>
+        <option value="CFC">CFC</option>
+        <option value="Personnel administratif">Personnel administratif</option>
+      </select>
+    </div>
+    <select class="box-input" name="Problèmes rencontrés" id="Problèmes rencontrés" >
+        <option value="Problèmes rencontrés" disabled selected>Problèmes rencontrés</option>
+        <option value="Réseau">Réseau</option>
+        <option value="Vol">Vol</option>
+        <option value="Vandalisme">Vandalisme</option>
+        <option value="Logiciel">Logiciel</option>
+        <option value="Installation">Installation</option>
+
+      
+      </select>
+
+    <div>
+      <select class="box-input" name="Niveau de Priorité" id="Niveau de Priorité" >
+        <option value="" disabled selected>Niveau de Priorité</option>
+        <option value="Faible">Faible</option>
+        <option value="Moyen">Moyen</option>
+        <option value="Urgent">Urgent</option>
+    </div>
+
     </p>
+
 
 
 </body>
