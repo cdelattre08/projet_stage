@@ -6,7 +6,7 @@
   <body>
     <form action="../captcha/validate.php" method="post">
     <table>
-    <tr>
+    <tr>     
       <td>
         <label>Entrer le texte dans l'image</label>
         <input name="captcha" type="text">

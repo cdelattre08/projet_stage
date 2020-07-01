@@ -67,7 +67,7 @@ if (isset($_REQUEST['username'], $_REQUEST['name'])){
         
         
     
-
+     
     if($res){
       
        echo "<div class='sucess'>

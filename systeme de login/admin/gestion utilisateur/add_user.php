@@ -93,7 +93,7 @@ if (isset($_REQUEST['username'], $_REQUEST['name'], $_REQUEST['email'], $_REQUES
 <!-- formulaire de d'ajout -->
 
 
-
+     
 <form class="box" action="" method="post">
   <h1 class="box-title"><a href = "../home.php">Retour sur espace administrateur</a><br></h1>
   <h1 class="box-logo box-title">

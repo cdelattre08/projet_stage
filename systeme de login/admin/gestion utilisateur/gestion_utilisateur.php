@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="../../style.css" />
     </head>
-<body>
+<body>     
     <div class="sucess">
         <a href="import.php">Importation de fichier</a> |
         <a href="add_user.php">Ajouter un utilisateur</a> | 

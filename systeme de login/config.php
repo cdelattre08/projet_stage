@@ -12,6 +12,6 @@ $conn = mysqli_connect("127.0.0.1", "rooot", "rooot", "registration");
 if($conn == false){
     die("ERREUR : Impossible de se connecter. " . mysqli_connect_error());
 }
-?>
+?>    
 
    

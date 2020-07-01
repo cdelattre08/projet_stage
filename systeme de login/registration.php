@@ -21,7 +21,7 @@
   // récupérer le nom de l'utilisateur
   $name = stripslashes($_REQUEST['name']);
   $name = mysqli_real_escape_string($conn, $name);
-
+    
   // récupérer l'email 
   $email = stripslashes($_REQUEST['email']);
   $email = mysqli_real_escape_string($conn, $email);
