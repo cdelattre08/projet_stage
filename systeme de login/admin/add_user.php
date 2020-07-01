@@ -86,7 +86,7 @@ if (isset($_REQUEST['username'], $_REQUEST['name'], $_REQUEST['email'], $_REQUES
 
     if($res){
        echo "<div class='sucess'>
-             <h3>L'utilisateur a été créée avec succés.</h3>
+             <h3>L'utilisateur a été créé avec succés.</h3>
        </div>";
        header("refresh:5;url=home.php");
     }
