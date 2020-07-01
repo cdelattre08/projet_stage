@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="../style.css" />
     </head>
-</html>
+</html>    
 <body>
 <?php
 
@@ -26,8 +26,7 @@
     <div class="sucess">
     <h1>Bienvenue <?php echo "".strip_tags($_SESSION['username']); ?> !</h1>
     <p>C'est votre espace administrateur.</p>
-    <a href="gestion_utilisateur.php">Gestions utilisateur</a> | 
-    <a href="list_user.php">Liste complète d'utilisateur</a> |
+    <a href="gestion utilisateur/gestion_utilisateur.php">Gestions utilisateur</a> | 
     <a href="../logout.php">Déconnexion</a>
     </div>
     
