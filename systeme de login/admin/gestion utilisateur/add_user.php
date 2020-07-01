@@ -102,7 +102,7 @@ if (isset($_REQUEST['username'], $_REQUEST['name'], $_REQUEST['email'], $_REQUES
     <h1 class="box-title">Ajouter un utilisateur</h1>
   <input type="text" class="box-input" name="username" 
   placeholder="Prénom" required />
-
+    
   <input type="text" class="box-input" name="name" 
   placeholder="Nom" required />
   

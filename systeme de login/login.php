@@ -26,7 +26,7 @@ if (isset($_POST['username'])){
   $result = mysqli_query($conn,$query) or die(mysql_error());
   
   if (mysqli_num_rows($result) == 1) {
-        
+            
     $user = mysqli_fetch_assoc($result);
 
     // vérifier si l'utilisateur est un administrateur ou un utilisateur

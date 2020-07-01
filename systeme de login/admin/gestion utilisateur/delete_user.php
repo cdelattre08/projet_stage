@@ -75,7 +75,7 @@ if (isset($_REQUEST['username'], $_REQUEST['name'])){
              </div>";
              header("refresh:5;url=../home.php");
     }
-    
+        
 }else{
 ?>
 <form class="box" action="" method="post">

@@ -16,7 +16,7 @@
 	   $select = $bdd->query('SELECT username,name,email FROM users WHERE username LIKE "%'.$q.'%" ORDER BY id DESC');
 	   if($select->rowCount() == 0) {
 	      $select = $bdd->query('SELECT username,name,email FROM users WHERE CONCAT(username, name) LIKE "%'.$q.'%" ORDER BY id DESC');
-	   }
+	   }    
 	}        
     ?>
     <a href = "home.php">Retour sur espace administrateur</a><br>

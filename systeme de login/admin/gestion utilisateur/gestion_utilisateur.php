@@ -15,5 +15,5 @@
         <a href="../home.php"> Retour </a> |
         <a href="../../logout.php">Déconnexion</a> |
     </div>
-</body>
+</body>    
 </html>       

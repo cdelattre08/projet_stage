@@ -17,7 +17,7 @@
   // récupérer le prénom de l'utilisateur 
   $username = stripslashes($_REQUEST['username']);
   $username = mysqli_real_escape_string($conn, $username); 
-    
+       
   // récupérer le nom de l'utilisateur
   $name = stripslashes($_REQUEST['name']);
   $name = mysqli_real_escape_string($conn, $name);

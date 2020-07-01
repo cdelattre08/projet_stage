@@ -78,7 +78,7 @@ if (isset($_POST['upload'])) {
                         echo "<td>$ligne[$i]</td>";
                     }    
                     echo "</tr>";
-                }     
+                }         
                 echo "</table>\n";
 ?>     
                 <form action="index.php">
