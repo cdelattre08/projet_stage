@@ -64,7 +64,7 @@ if (isset($_REQUEST['username'], $_REQUEST['name'])){
     $query = "DELETE FROM `users` 
           WHERE username='$username' AND name='$name'";
     $res = mysqli_query($conn, $query); 
-    
+        
         
     
 

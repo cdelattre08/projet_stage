@@ -80,7 +80,7 @@ if (isset($_POST['upload'])) {
                     echo "</tr>";
                 }
                 echo "</table>\n";
-?>
+?>     
                 <form action="index.php">
                     <input type="submit" value="Cancel">
                 </form>

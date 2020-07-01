@@ -1,6 +1,6 @@
 <?php require('../../config.php'); ?>
 <html>
-  <head>
+  <head>    
     <title>Supprimer tous les utilisateurs</title>
   </head>
   <body>

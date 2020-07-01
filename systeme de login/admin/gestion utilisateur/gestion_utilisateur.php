@@ -16,4 +16,4 @@
         <a href="../../logout.php">Déconnexion</a> |
     </div>
 </body>
-</html>   
+</html>       
