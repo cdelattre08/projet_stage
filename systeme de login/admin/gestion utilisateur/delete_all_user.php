@@ -1,6 +1,7 @@
 <?php require('../../config.php'); ?>
 <html>
-  <head>    
+  <head>  
+    <meta charset='utf-8'>  
     <title>Supprimer tous les utilisateurs</title>
   </head>
   <body>
@@ -8,13 +9,13 @@
     <table>
     <tr>         
       <td>
-        <label>Entrer le texte dans l'image</label>
+        <label>Entrer le numéro du captcha</label>
         <input name="captcha" type="text">
         <img src="../captcha/captcha.php" style="vertical-align: middle;"/>
       </td>
     </tr>
     <tr>
-      <td><input name="submit" type="submit" value="Submit"></td>
+      <td><input name="submit" type="submit" value="Submit" onclick="return confirm('Voulez vous vraiment supprimer ?') "></td>
     </tr>
     </table>
     </form>

@@ -27,6 +27,7 @@
     <h1>Bienvenue <?php echo "".strip_tags($_SESSION['username']); ?> !</h1>
     <p>C'est votre espace administrateur.</p>
     <a href="gestion utilisateur/gestion_utilisateur.php">Gestions utilisateur</a> | 
+    <a href="gestion ticket/ticket.php">Gestions ticket</a> | 
     <a href="../logout.php">Déconnexion</a>
     </div>
     

@@ -9,7 +9,8 @@ define('DB_NAME', 'registration');
 $conn = mysqli_connect("127.0.0.1", "rooot", "rooot", "registration");
  
 // Vérifier la connexion
-if($conn == false){
+if($conn == false)
+{
     die("ERREUR : Impossible de se connecter. " . mysqli_connect_error());
 }
 ?>    

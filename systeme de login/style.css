@@ -123,3 +123,23 @@ nav a:hover{
     color: rgb(119, 80, 80);
     border-bottom: 2px solid gold;
 }
+
+.commentaires
+{
+  border-radius: 5px;
+  font-size: 15px;
+  width: 18%;
+  height: 51px;
+}
+.button
+{
+  border-radius: 5px;
+  background: #d2483c;
+  font-size: 19px;
+  width: 15%;
+  color: #fff;
+}
+.choix , input[type=radio]
+{
+  font-size: 25px;
+}

@@ -46,7 +46,7 @@ if (isset($_POST['username'])){
             <nav> <!--Contient le menus-->
                 <ul> 
                     
-                    <li><a href="../systeme de login/index.php">Connexion</a></li> <!--Appartient au menus-->
+                    <li><a href="../systeme de login/login.php">Connexion</a></li> <!--Appartient au menus-->
                     <li><a href="../page site/Apropos.html">A propos de nous</a></li> <!--Appartient au menu-->
                     <li><a href="../page site/index.html">Accueil</a></li> <!--Appartient au menu-->
                 </ul>
@@ -65,8 +65,7 @@ if (isset($_POST['username'])){
 <input type="password" class="box-input" name="password" placeholder="Mot de passe">
 
 <input type="submit" value="Connexion " name="submit" class="box-button">
-<p class="box-register">Vous êtes nouveau ici ? 
-  <a href="registration.php">S'inscrire</a>
+
 </p>
 <?php if (! empty($message)) { ?>
     <p class="errorMessage"><?php echo $message; ?></p>

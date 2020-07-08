@@ -20,7 +20,7 @@ if (isset($_REQUEST['username'], $_REQUEST['name'], $_REQUEST['email'], $_REQUES
   $name = mysqli_real_escape_string($conn, $name);
 
   $email = stripslashes($_REQUEST['email']);
- 
+  $email = $_POST['email']."@la-providence.net";
   $email = mysqli_real_escape_string($conn, $email);
 
   $password = stripslashes($_REQUEST['password']);
@@ -30,7 +30,7 @@ if (isset($_REQUEST['username'], $_REQUEST['name'], $_REQUEST['email'], $_REQUES
   $type = stripslashes($_REQUEST['type']);
   $type = mysqli_real_escape_string($conn, $type);
 
-  $mail = $_POST['email']."@la-providence.net";
+  
 
 
   if (empty($username)  || empty($name) || empty($email) || empty($type) || empty($password))
@@ -42,17 +42,7 @@ if (isset($_REQUEST['username'], $_REQUEST['name'], $_REQUEST['email'], $_REQUES
     header("refresh:5;url=add_user.php");
     exit('');
   }
-  $select = mysqli_query($conn, "SELECT * FROM users WHERE username = '".$_POST['username']."'");
-  if(mysqli_num_rows($select))
-  {
-    echo "<div class='sucess'>
-    <h3>Cet utilisateur existe déja.</h3>
-   
-    </div>";
-    header("refresh:5;url=add_user.php");
-    exit('');
-  }
-
+  
   $select2 = mysqli_query($conn, "SELECT * FROM users WHERE email = '".$_POST['email']."'");
   if(mysqli_num_rows($select2)) 
   {
@@ -63,14 +53,7 @@ if (isset($_REQUEST['username'], $_REQUEST['name'], $_REQUEST['email'], $_REQUES
     exit('');
   } 
 
-  if($mail)
-  {
-
-  }
-  else
-  {
-    exit('');
-  }
+  
 
     $query = "INSERT into `users` (username, name, email, type, password)
           VALUES ('$username', '$name', '$email', '$type', '".hash('sha256', $password)."')";
@@ -113,9 +96,9 @@ if (isset($_REQUEST['username'], $_REQUEST['name'], $_REQUEST['email'], $_REQUES
       <select class="box-input" name="type" id="type" >
         <option value="" disabled selected>Type</option>
         <option value="admin">Administrateur</option>
-        <option value="professeur">Professeur</option>
-        <option value="professeur">Personnel</option>
-        <option value="eleve">Elève</option>
+        <option value="2">Professeur</option>
+        <option value="3">Personnel</option>
+        <option value="4">Elève</option>
       </select>
   </div>
   
