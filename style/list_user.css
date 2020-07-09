@@ -1,23 +1,28 @@
-table{
-    caption-side: top;
-    border-collapse: collapse;
-    width: 300px;
-    margin-bottom: 20px;
-  }
-  .t1{
-    table-layout: fixed;
-  }
-  
-  th, td{
-    border: 3px solid rgb(111, 168, 111);
-    padding: 10px;
-  }
-form{
-    padding-top: 2%;
-    padding-left: 5%;
+table
+{
+  caption-side: top;
+  border-collapse: collapse;
+  width: 300px;
+  margin-bottom: 20px;
 }
-caption{
-    background-color: #0AD;
-    font-weight: bold;
-  }
+.t1
+{
+  table-layout: fixed;
+}
+  
+th, td
+{
+  border: 3px solid rgb(111, 168, 111);
+  padding: 10px;
+}
+form
+{
+  padding-top: 2%;
+  padding-left: 5%;
+}
+caption
+{
+  background-color: #0AD;
+  font-weight: bold;
+}
 
