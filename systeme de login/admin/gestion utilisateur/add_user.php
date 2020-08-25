@@ -3,7 +3,7 @@
 <html>
   <head>
     <title>Ajoute un utilisateur</title>
-    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../../style/add_user.css" />
     <meta charset="utf-8">
   </head>
 <body>
@@ -13,7 +13,6 @@
 if (isset($_REQUEST['username'], $_REQUEST['name'], $_REQUEST['email'], $_REQUEST['type'], $_REQUEST['password'])){
 
   $username = stripslashes($_REQUEST['username']);
-  
   $username = mysqli_real_escape_string($conn, $username);
   
   $name = stripslashes($_REQUEST['name']);
@@ -39,7 +38,7 @@ if (isset($_REQUEST['username'], $_REQUEST['name'], $_REQUEST['email'], $_REQUES
     <h3>Vous n'avez pas remplis tous les champs.</h3>
     <p></p>
     </div>";
-    header("refresh:5;url=add_user.php");
+    header("refresh:3;url=add_user.php");
     exit('');
   }
   
@@ -49,7 +48,7 @@ if (isset($_REQUEST['username'], $_REQUEST['name'], $_REQUEST['email'], $_REQUES
     echo "<div class='sucess'>
     <h3>Cette adresse mail existe déja.</h3>
     </div>";
-    header("refresh:5;url=add_user.php");
+    header("refresh:3;url=add_user.php");
     exit('');
   } 
 
@@ -65,7 +64,7 @@ if (isset($_REQUEST['username'], $_REQUEST['name'], $_REQUEST['email'], $_REQUES
        echo "<div class='sucess'>
              <h3>L'utilisateur a été créé avec succés.</h3>
        </div>";
-       header("refresh:5;url=../home.php");
+       header("refresh:3;url=../home.php");
     }
     
       

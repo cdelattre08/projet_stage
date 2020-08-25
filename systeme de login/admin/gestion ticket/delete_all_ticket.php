@@ -1,12 +1,13 @@
-<?php require('../../config.php'); ?>
-<html>
-  <head>  
-    <meta charset='utf-8'>  
-    <title>Supprimer tous les utilisateurs</title>
-  </head>
-  <body>
-    <a href = "gestion_utilisateur.php">Retour</a><br>
-    <form action="../captcha/validate.php" method="post">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supprimer TOUS les tickets</title>
+    
+</head>
+<body>
+<form action="../captcha/validate_ticket.php" method="post">
     <table>
     <tr>         
       <td>
@@ -21,10 +22,7 @@
     </table>
     </form>
 
+    <a href="gestion_ticket.php">Retour sur espace Ticket</a><br>
     
-  </body>
+</body>
 </html>
-
-
-
-

@@ -20,30 +20,36 @@ table {
   padding: 0;
   width: 100%;
   table-layout: fixed;
+  white-space: normal;
 }
 
 table caption {
   font-size: 1.5em;
-  margin: .5em 0 .75em;
+  margin: 50px auto;
+  
 }
 
 table tr {
   background-color: #f8f8f8;
   border: 1px solid #ddd;
   padding: .35em;
+  
 }
 
 table th,
 table td {
   padding: .625em;
-  text-align: center;
+  text-align: center; 
+  word-wrap: break-word;
 }
 
 table th {
   font-size: .85em;
   letter-spacing: .1em;
   text-transform: uppercase;
+  
 }
+
 
 @media screen and (max-width: 600px) {
   table {
@@ -65,7 +71,7 @@ table th {
   table tr {
     border-bottom: 3px solid #ddd;
     display: block;
-    margin-bottom: .625em;
+    margin-bottom: .6em;
   }
   
   table td {

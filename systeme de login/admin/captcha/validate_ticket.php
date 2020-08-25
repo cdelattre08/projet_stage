@@ -17,7 +17,7 @@
     $user  = 'rooot';       // Votre identifant 
     $mdp  = 'rooot';       // Votre mot de passe
     $base  = 'registration';       // Nom de botre base
-    $table_a_vider   = 'users';  // Nom de la table que tu veux vider
+    $table_a_vider   = 'ticket';  // Nom de la table que tu veux vider
      
     // ON SE CONNECTE ET ON SELECTIONNE LA BASE
       
@@ -40,13 +40,13 @@
     }
       // ON VIDE $table_a_vider
       vider_table($table_a_vider);
-      header("refresh:5;url=../gestion utilisateur/gestion_utilisateur.php");
+      header("refresh:5;url=../gestion ticket/gestion_ticket.php");
     }
     else
     {
       $status = "<p style='color:#FFFFFF; font-size:20px'>
       <span style='background-color:#FF0000;'>Le code captcha entré ne correspond pas! Veuillez réessayer.</span></p>";
-      header("refresh:5;url=../gestion utilisateur/delete_all_user.php");
+      header("refresh:5;url=../gestion ticket/delete_all_ticket.php");
     }
     echo $status;
 ?>
